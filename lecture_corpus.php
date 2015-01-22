@@ -1,5 +1,5 @@
 <P>
-<B>DEBUTTTTTT DU PROCESSUS :</B>
+<B>DEMARRAGE DU PROCESSUS :</B>
 <BR>
 <?php echo " ", date ("h:i:s"); ?>
 </P>
@@ -39,7 +39,7 @@ function explorerDir($path)
 				$path_source = $path."/".$entree;
 				if( preg_match("/.htm/i", $path_source) )
 				{
-					echo "--DEBUT indexation : $path_source ", "<br>";
+					echo "fichier indexé : $path_source ", "<br>";
 					//appel au module d'indexation
 					indexation($path_source);
 					echo "--FIN indexation : $path_source ", "<br>";
@@ -51,7 +51,7 @@ function explorerDir($path)
 }
 ?>
 <P>
-<B>FINNNNNN DU PROCESSUS :</B>
+<B>ARRÊT DU PROCESSUS :</B>
 <BR>
 <?php echo " ", date ("h:i:s"); ?>
 </P>

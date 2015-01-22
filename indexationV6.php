@@ -32,7 +32,7 @@ function indexation($source)
 	//Faire une indexation du head du HTML =  description + keywords + titre 
 	// à faire 
 	//Découpage par liste de séparateurs
-	$tab_mots  = tokenisation (" ,«;.»’'\"()", $texte_head_description_keywords_title ) ;
+	$tab_mots  = tokenisation (" ,.():!?»«\'\t\"\n\r'- +/*%{}[]#0123456789", $texte_head_description_keywords_title ) ;
 
 	//Affiche de la trace du découpage
 	//print_tab($tab_mots);
@@ -67,7 +67,7 @@ function indexation($source)
 	//Faire une indexation du head du HTML =  description + keywords + titre 
 	// à faire 
 	//Découpage par liste de séparateurs
-	$tab_mots  = tokenisation (" ,«;.»’'\"()!?", $body_texte ) ;
+	$tab_mots  = tokenisation (" ,.():!?»«\'\t\"\n\r'- +/*%{}[]#0123456789", $body_texte ) ;
 
 	//Affiche de la trace du découpage
 	//print_tab($tab_mots);
@@ -98,7 +98,7 @@ function indexation($source)
 	$sql1 =  "INSERT INTO document VALUES (
 				'',
 				'$source',
-				'$titre',
+				'$title',
 				'$description')
 			";
 	mysqli_query($connect, $sql1);
@@ -131,6 +131,5 @@ function indexation($source)
 	mysqli_close($connect);	
 }
 	//Affichage résumé du processus d'indexation du document en cours
-	//print_resume($source, $title, $description, $nbr_mots_total, $nbr_final_mots);
+		//echo "$title";
 ?>
-	
