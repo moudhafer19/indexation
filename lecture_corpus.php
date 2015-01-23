@@ -42,7 +42,7 @@ function explorerDir($path)
 					echo "fichier indexé : $path_source ", "<br>";
 					//appel au module d'indexation
 					indexation($path_source);
-					echo "--FIN indexation : $path_source ", "<br>";
+					//echo "--FIN indexation : $path_source ", "<br>";
 				}
 			}
 		}

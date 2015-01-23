@@ -16,13 +16,13 @@ if( isset($_POST['query']) )
 
 	$resultats = mysqli_query($connect, $sql);
 
-	$nombre = mysqli_num_rows ( $resultats) ;
+	$nombre = mysqli_num_rows ($resultats) ;
 	
 	echo "<p>Environ $nombre résultats</p>" ;
 	
 	$i=1;
 	
-	while ( $ligne  = mysqli_fetch_row( $resultats) )
+	while ( $ligne  = mysqli_fetch_row($resultats))
 	{
 		$mot = $ligne[0];
 		$poids = $ligne[1];
